@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Programmer Calculator</title>
+    <link rel="stylesheet" type="text/css" href="4.ProgrammerCalculator-css.css" />
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+</head>
+<body>
+    <div id="main">
+        <div id="programInfo">
+            <img src="Calculator_Vista_Icon.png" id="calcPic" alt="CALC"/>
+            <p>Calculator</p>
+			<img src="closeMinimize.jpg" id="closeMinimize" alt="VIEW"/>
+        </div>
+            <div>
+                <nav>
+                    <button class="navCommands">View</button>
+                    <button class="navCommands">Edit</button>
+                    <button class="navCommands">Help</button>
+                </nav>
+            </div>
+            <div id="calcBackground">
+                <div id="display">
+                    <div class="whiteBorder">
+                        <p id="result">8854455</p>
+                    </div>
+                </div>
+                <div id="binary">
+                    <div class="whiteBorder">
+                        <table id="binaryTable">
+                            <tr>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td class="binaryLast">0000</td>
+                            </tr>
+                            <tr>
+                                <td>63</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>47</td>
+                                <td></td>
+                                <td></td>
+                                <td class="binaryLast">32</td>
+                            </tr>
+                            <tr>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>1000</td>
+                                <td>0111</td>
+                                <td>0001</td>
+                                <td>1011</td>
+                                <td>1011</td>
+                                <td class="binaryLast">0111</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>15</td>
+                                <td></td>
+                                <td></td>
+                                <td class="binaryLast">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="buttons">
+                        <table id="buttonsTable">
+                            <colgroup>
+                                <col span="9" />
+                            </colgroup>
+                            <tr>
+                                <td rowspan="3">
+                                    <ul class="verticalRadio">
+                                        <li>
+                                            <input type="radio" id="Hex" value="Hex" name="System"/>
+                                            <label for="Hex">Hex</label> 
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Dec" value="Dec" name="System"/>
+                                            <label for="Dec">Dec</label> 
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Oct" value="Oct" name="System"/>
+                                            <label for="Oct">Oct</label> 
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Bin" value="Bin" name="System"/>
+                                            <label for="Bin">Bin</label> 
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="cell"></td>
+                                <td>
+									<input class="semiDarkButton" type="button" value="Mod" />
+                                </td>
+                                <td class="cell">A</td>
+                                <td>
+                                    <input class="darkButton" type="button" value="MC" /> 
+                                </td>
+                                <td>
+                                    <input class="darkButton" type="button" value="MR" />
+                                </td>
+                                <td>
+                                    <input class="darkButton" type="button" value="MS" />
+                                </td>
+                                <td>
+                                    <input class="darkButton" type="button" value="M+" />
+                                </td>
+                                <td>
+                                    <input class="darkButton" type="button" value="M-" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="(" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value=")" />
+                                </td>
+                                <td class="cell">B</td>
+                                <td>
+                                    <input class="semiDarkButton" id="arrow" type="button" value="←" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="CE" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="C" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="±" />
+                                </td>
+                                <td class="cell">√</td>           
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="RoL" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="RoR" />
+                                </td>
+                                <td class="cell">C</td>
+                                <td>
+                                    <input class="lightButton" type="button" value="7" />
+                                </td>
+                                <td>
+                                    <input class="lightButton" type="button" value="8" />
+                                </td>
+                                <td>
+                                    <input class="lightButton" type="button" value="9" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="/" />
+                                </td>
+                                <td class="cell">%</td>           
+                            </tr>
+                            <tr>
+                                <td rowspan="3">
+                                    <ul class="verticalRadio">
+                                        <li>
+                                            <input type="radio" id="Qword" value="Qword" name="Data"/>
+                                            <label for="Qword">Qword</label> 
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Dword" value="Dword" name="Data"/>
+                                            <label for="Dword">Dword</label> 
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Word" value="Word" name="Data"/>
+                                            <label for="Word">Word</label> 
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Byte" value="Byte" name="Data"/>
+                                            <label for="Byte">Byte</label> 
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="Or" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="XoR" />
+                                </td>
+                                <td class="cell">D</td>
+                                <td>
+                                    <input class="lightButton" type="button" value="4" />
+                                </td>
+                                <td>
+                                    <input class="lightButton" type="button" value="5" />
+                                </td>
+                                <td>
+                                    <input class="lightButton" type="button" value="6" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="*" />
+                                </td>
+                                <td class="cell">1/x</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="Lsh" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="Rsh" />
+                                </td>
+                                <td class="cell">E</td>
+                                <td>
+                                    <input class="lightButton" type="button" value="1" />
+                                </td>
+                                <td>
+                                    <input class="lightButton" type="button" value="2" />
+                                </td>
+                                <td>
+                                    <input class="lightButton" type="button" value="3" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="-" />
+                                </td>
+                                <td rowspan="2">
+                                    <input class="semiDarkButton" id="equal" type="button" value="=" />
+                                </td>         
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="Not" />
+                                </td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="And" />
+                                </td>
+                                <td class="cell">F</td>
+                                <td colspan="2">
+                                    <input class="lightButton" id="zero" type="button" value="0"/>
+                                </td>
+                                <td class="cell">.</td>
+                                <td>
+                                    <input class="semiDarkButton" type="button" value="+" />
+                                </td>        
+                            </tr>
+                        </table> 
+                    </div>
+            </div>
+    </div>
+</body>
+</html>
